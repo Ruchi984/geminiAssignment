@@ -6,15 +6,15 @@
     
   <classes>
   	<class name="com.TestCases">
-  	<!-- <methods>
+  <!-- 	<methods>
   			<include name="listCountriesPresentinAPIbutMissinginDB"/>
   		</methods>
   		<methods>
   			<include name="comparingCapitalData"/>
-  		</methods> -->
+  		</methods> 
   		<methods>
-  			<exclude name="maxBordersComparison"/>
-  		</methods>
+  			<include name="maxBordersComparison"/>
+  		</methods>  -->
   	</class>	
   </classes> 
   

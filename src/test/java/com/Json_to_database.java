@@ -2,10 +2,13 @@ package com;
 
 import static io.restassured.RestAssured.*;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,10 +19,15 @@ import io.restassured.response.Response;
 
 public class Json_to_database {
 
-	public Connection connecttodb() throws SQLException {
+	public Connection connecttodb() throws SQLException, IOException {
 
+		Properties prop=new Properties();
+		FileInputStream fls=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\global.properties");
+		prop.load(fls);
+		String password=prop.getProperty("password");
+		
 		String mysqlurl = "jdbc:mysql://localhost:3306/gemini";
-		Connection con = DriverManager.getConnection(mysqlurl, "root", "Mirchi@0711");
+		Connection con = DriverManager.getConnection(mysqlurl, "root", password);
 		System.out.println("Connection established......");
 		return con;
 
@@ -35,7 +43,7 @@ public class Json_to_database {
 	}
 
 	
-	public void insertValuesInCountries() throws SQLException, ParseException {
+	public void insertValuesInCountries() throws SQLException, ParseException, IOException {
 
 		Connection con = connecttodb();
 		String data = apiResponse();
@@ -64,7 +72,7 @@ public class Json_to_database {
 		
 	}
 
-	public void insertValuesInBorders() throws SQLException, ParseException {
+	public void insertValuesInBorders() throws SQLException, ParseException, IOException {
 		
 		Connection con = connecttodb();
 		String data = apiResponse();

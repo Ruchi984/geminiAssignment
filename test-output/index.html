@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -108,6 +108,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Countries" title="com.TestCases" hash-for-method="listCountriesPresentinAPIbutMissinginDB">listCountriesPresentinAPIbutMissinginDB</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Countries" title="com.TestCases" hash-for-method="maxBordersComparison">maxBordersComparison</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Countries -->
@@ -142,6 +147,13 @@
                   <span class="method-name">listCountriesPresentinAPIbutMissinginDB</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="maxBordersComparison">
+                  </a> <!-- maxBordersComparison -->
+                  <span class="method-name">maxBordersComparison</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Countries-class-passed -->
         </div> <!-- panel Countries -->
@@ -156,11 +168,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;2&quot; name=&quot;Countries&quot;&gt;
   &lt;test name=&quot;Borders&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.TestCases&quot;&gt;
-        &lt;methods&gt;
-          &lt;exclude name=&quot;maxBordersComparison&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.TestCases --&gt;
+      &lt;class name=&quot;com.TestCases&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Borders --&gt;
 &lt;/suite&gt; &lt;!-- Countries --&gt;
@@ -200,20 +208,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'comparingCapitalData')
 data.setCell(0, 2, 'com.TestCases')
-data.setCell(0, 3, 565);
+data.setCell(0, 3, 605);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'listCountriesPresentinAPIbutMissinginDB')
+data.setCell(1, 1, 'maxBordersComparison')
 data.setCell(1, 2, 'com.TestCases')
-data.setCell(1, 3, 50);
+data.setCell(1, 3, 475);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'listCountriesPresentinAPIbutMissinginDB')
+data.setCell(2, 2, 'com.TestCases')
+data.setCell(2, 3, 55);
 window.suiteTableData['Countries']= { tableData: data, tableDiv: 'times-div-Countries'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 615 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Countries">
               </div> <!-- times-div-Countries -->
             </div> <!-- times-div -->
@@ -228,16 +240,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Countries" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.TestCases</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">maxBordersComparison</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Countries" class="panel">
@@ -253,11 +258,15 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">comparingCapitalData</span>
-                <span class="method-start">6001 ms</span>
+                <span class="method-start">5474 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">listCountriesPresentinAPIbutMissinginDB</span>
-                <span class="method-start">6571 ms</span>
+                <span class="method-start">6081 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">maxBordersComparison</span>
+                <span class="method-start">6137 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
